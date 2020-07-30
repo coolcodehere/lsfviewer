@@ -13,7 +13,7 @@ reddit = praw.Reddit(client_id = reddit["clientID"], \
 subreddit = reddit.subreddit("LivestreamFail")
 
 def getDailyTopPosts(limit):
-  postUrls = []
+  postData = []
   for post in subreddit.top(time_filter="day", limit=limit):
-    postUrls.append(post.url)
-  return postUrls
+    postData.append(post)
+  return postData
