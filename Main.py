@@ -1,5 +1,6 @@
 import RedditParser
 import Downloader
+import ClipProcessing
 
 posts = RedditParser.getDailyTopPosts(30)
 print([x.url for x in posts])
@@ -12,7 +13,8 @@ for post in posts:
     clipCount += 1
   if clipCount == 20:
     break
-
+  
+ClipProcessing.processClips()
 
   
   

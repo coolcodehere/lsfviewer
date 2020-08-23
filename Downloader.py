@@ -7,7 +7,7 @@ config.read("config.ini")
 twitch = config["Twitch"]
 authResponse = requests.post(f"https://id.twitch.tv/oauth2/token?client_id={twitch['clientID']}&client_secret={twitch['clientSecret']}&grant_type=client_credentials").json()
 token = authResponse["access_token"]
-outputFolderPath = "E:\\projects\\video-automation\\clips"
+outputFolderPath = "E:\\projects\\video-automation\\clips\\new"
 
 def downloadClip(slug):
   outputFile = outputFolderPath + "\\" + slug + ".mp4"
